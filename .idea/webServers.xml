@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5b922ad2-c61c-4145-8716-c9f92e658792" name="HETZNER">
+        <fileTransfer rootFolder="/usr/home/sstud350/public_html/cms23" accessType="SFTP" host="s2210456016.student.kwmhgb.at" port="222" sshConfigId="1271c7f7-dfe8-4bb6-8c73-c2d38cacdc54" sshConfig="Kloihofer">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

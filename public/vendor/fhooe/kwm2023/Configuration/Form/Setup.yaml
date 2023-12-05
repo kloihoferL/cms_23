@@ -1,0 +1,16 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          130: EXT:kwm2023/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                translation:
+                  translationFiles:
+                    120: 'EXT:kwm2023/Resources/Private/Language/locallang.xlf'

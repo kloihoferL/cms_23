@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+<div class="card p-3">
+<f:if condition="{data.tx_mask_description}">
+    {data.tx_mask_description -> f:format.html()}
+</f:if>
+<f:if condition="{data.tx_mask_elements}">
+    <table class="table">
+        <f:for each="{data.tx_mask_elements}" as="data_item">
+            <tr>
+                <f:if condition="{data_item.tx_mask_key}">
+                    <td>{data_item.tx_mask_key}</td>
+                </f:if>
+                <f:if condition="{data_item.tx_mask_value}">
+                    <td>{data_item.tx_mask_value}</td>
+                </f:if>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
+<f:if condition="{data.tx_mask_link}">
+    <f:link.typolink parameter="{data.tx_mask_link}"></f:link.typolink>
+</f:if>
+<f:if condition="{data.tx_mask_linklabel}">
+    {data.tx_mask_linklabel}
+</f:if>
+</div>
+</f:section>

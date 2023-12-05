@@ -1,0 +1,14 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+#neuere Syntax
+#@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+#@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+
+
+##############
+#### PAGE ####
+##############
+
+

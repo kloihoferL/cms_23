@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:trialog/Resources/Public/Images/logo_trialog.png
+        fileInverted = EXT:trialog/Resources/Public/Images/logo_trialog.png
+        height = 52
+        width = 192
+        alt = trialog
+        linktitle = trialog
+    }
+    favicon {
+        file = EXT:trialog/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:trialog/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:trialog/Resources/Private/Partials/Page/
+        templateRootPath = EXT:trialog/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:trialog/Resources/Private/Layouts/
+        partialRootPath = EXT:trialog/Resources/Private/Partials/
+        templateRootPath = EXT:trialog/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:trialog/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:trialog/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:trialog/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}

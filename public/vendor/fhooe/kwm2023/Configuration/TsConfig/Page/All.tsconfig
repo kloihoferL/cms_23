@@ -1,0 +1,11 @@
+#
+# PageTS for kwm2023
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:kwm2023/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:kwm2023/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:kwm2023/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:kwm2023/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+tx_news.templateLayouts{
+    1 = Rezepte
+}

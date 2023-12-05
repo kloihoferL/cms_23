@@ -1,0 +1,78 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+#neuere Syntax
+#@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+#@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+
+
+##############
+#### PAGE ####
+##############
+page.config.contentObjectExceptionHandler = 0;
+page {
+    includeCSS {
+        theme = EXT:kwm2023/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        kwm2023_scripts = EXT:kwm2023/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+
+lib.maskContentElement{
+    templateRootPaths{
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+    partialRootPaths{
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+    layoutRootPaths{
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}
+
+//------list neu
+plugin.tx_news{
+    settings{
+        list{
+            itemsPerPage = 3
+            insertAbove = false
+            insertBelow = true
+        }
+    }
+}
+
+_LOCAL_LANG{
+    de {
+        more-link = weiterlesen
+        back-link = zur Liste
+    }
+}
+
+lib.record = RECORDS
+lib.record{
+    source.data = current:1
+    source.intval = 1
+    tables =  tt_content
+}
+
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:kwm2023/kwm2023/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:kwm2023/kwm2023/Configuration/Form/Setup.yaml
+
+
+
+

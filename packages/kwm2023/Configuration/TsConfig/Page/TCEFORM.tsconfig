@@ -1,0 +1,13 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        layout.addItems.11 = Custom Quote;
+
+        header_layout.addItems.11 = Revert Header and Subheader;
+    }
+}

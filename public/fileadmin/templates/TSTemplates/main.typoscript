@@ -1,0 +1,67 @@
+page = PAGE
+page.typeNum = 0
+page.config.contentObjectExceptionHandler = 0
+
+lib.dynamicContent = COA
+
+lib.dynamicContent {
+
+    10 = LOAD_REGISTER
+
+    10.colPos.cObject = TEXT
+
+    10.colPos.cObject {
+
+        field = colPos
+
+        ifEmpty.cObject = TEXT
+
+        ifEmpty.cObject {
+
+            value.current = 1
+
+            ifEmpty = 0
+
+        }
+
+    }
+
+    20 = CONTENT
+
+    20 {
+
+        table = tt_content
+
+        select {
+
+            orderBy = sorting
+
+            where = {#colPos}={register:colPos}
+
+            where.insertData = 1
+
+        }
+
+    }
+
+    90 = RESTORE_REGISTER
+
+}
+
+#damit html und dynamische elemente ausgegeben werden können
+page.10 = FLUIDTEMPLATE
+page.10{
+    #sagen wie es heisst
+    templateName = Index
+    templateRootPaths{
+        0 = fileadmin/templates/HTMLTemplates/Templates/
+    }
+
+    partialRootPaths{
+        0 = fileadmin/templates/HTMLTemplates/Partials/
+    }
+
+    layoutRootPaths{
+        0 = fileadmin/templates/HTMLTemplates/Layouts/
+    }
+}

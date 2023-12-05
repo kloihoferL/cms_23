@@ -1,0 +1,123 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: kWMContact
+label: KWMContact
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Danke für Ihre Nachricht'
+      recipients:
+        '{email-1}': '{text-1}'
+      senderAddress: s2210456016@fhooe.at
+      senderName: ''
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '2'
+      additionalParameters: ''
+      fragment: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: 'Persönliche Daten'
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Vorname
+        validators:
+          -
+            identifier: NotEmpty
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte einen Vornamen eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte einen Vornamen eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte einen Vornamen eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte einen Vornamen eingeben'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Nachname
+        validators:
+          -
+            identifier: NotEmpty
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte einen Nachnamen eingeben'
+      -
+        defaultValue: ''
+        validators:
+          -
+            identifier: EmailAddress
+        type: Email
+        identifier: email-1
+        label: E-Mail
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-2
+    label: Nachricht
+    renderables:
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: 'Kommentar,…'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '5'
+              maximum: '1000'
+            identifier: StringLength
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '5'
+            maxlength: '1000'
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

@@ -1,0 +1,44 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+//Schriften einbinden
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: url("../..Fonts/Roboto-Black.ttf");
+}
+
+body{
+
+  letter-spacing: 0.03rem;
+}
+
+.btn-primary{
+  background-color: #9A0404;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+  border: 0;
+}
+
+.btn-primary:hover{
+  background-color: #585858;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+  border:0;
+}
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
