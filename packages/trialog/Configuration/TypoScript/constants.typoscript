@@ -39,6 +39,7 @@ plugin.bootstrap_package {
 }
 
 
+
 ########################
 ### CONTENT ELEMENTS ###
 ########################
@@ -58,3 +59,8 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+// Für die News Variablen anlegen
+plugin.tx_news.view.templateRootPath = EXT:trialog/Resources/Private/Templates/
+plugin.tx_news.view.partialRootPath = EXT:trialog/Resources/Private/Partials/
+plugin.tx_news.view.layoutRootPath = EXT:trialog/Resources/Private/Layouts/

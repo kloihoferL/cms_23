@@ -10,14 +10,13 @@
 
 //Schriften einbinden
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'PT Serif';
   font-style: normal;
-  font-weight: 400;
-  src: url("../..Fonts/Roboto-Black.ttf");
+  src: url("../..Fonts/PTSerif-Regular.ttf");
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Serif', serif;
   letter-spacing: 0.03rem;
 }
 

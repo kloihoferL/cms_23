@@ -6,6 +6,7 @@ TCEFORM {
 
     }
     tt_content {
+        layout.addItems.12 = CustomImage
 
     }
 }

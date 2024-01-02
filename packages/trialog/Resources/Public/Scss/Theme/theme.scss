@@ -3,42 +3,311 @@
 //
 @import "variables";
 
+// eher eigene Files erstelle und in den Ordner geben, und importieren
+
 //
 // Import needed Bootstrap Package Files
 //
 @import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
 
+// links einfärben
+a{
+  color:#9A0404;
+}
+
 //Schriften einbinden
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'PT Serif';
   font-style: normal;
-  font-weight: 200;
-  src: url("../..Fonts/Roboto-Black.ttf");
+  src: url("../..Fonts/PTSerif-Regular.ttf");
 }
 
-body{
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  src: url("../..Fonts/Roboto-Light.ttf");
+}
 
+
+// Schriftarten--------------
+h1{
+   font-size: 4rem;
+   font-family: 'PT Serif', serif;
   letter-spacing: 0.03rem;
+ }
+
+h2{
+  font-size: 1.8rem;
+  font-family: 'PT Serif', serif;
+  letter-spacing: 0.03rem;
+  padding-bottom: 0.6rem;
 }
 
-.btn-primary{
-  background-color: #9A0404;
-  color: white;
-  text-transform: uppercase;
-  padding: 0.7rem 1.4rem 0.7rem 1.4rem;
-  border: 0;
+p{
+  font-family: 'Roboto', serif;
+  letter-spacing: 0.03rem;
+  padding-bottom: 0.2rem;
 }
 
-.btn-primary:hover{
-  background-color: #585858;
-  color: white;
-  text-transform: uppercase;
-  padding: 0.7rem 1.4rem 0.7rem 1.4rem;
-  border:0;
-}
 
-.navbar-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
+
+  // -----Buttons-------------------------
+  .btn-primary{
+    background-color: #9A0404;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    border: 2px solid #9A0404;
+  }
+
+  .btn-primary:hover{
+    background-color: transparent;
+    color: #9A0404;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    border: 2px solid #9A0404;
+  }
+
+  .btn-tertiary{
+    background-color: white;
+    color: #9A0404;
+    border: 2px solid #9A0404;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    width: 100%;
+  }
+
+  .btn-tertiary:hover{
+    background-color: #9A0404;
+    color: white;
+    border: 2px solid #9A0404;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+  }
+
+  .btn-outline-primary{
+    background-color: white;
+    color: #9A0404;
+    border: 2px solid #9A0404;
+    text-transform: uppercase;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    margin-right: 15px;
+  }
+
+  .btn-outline-primary:hover{
+    background-color: #9A0404;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid #9A0404;
+    margin-right: 15px;
+  }
+
+  //-----------------------------------------
+
+
+  //-------------CARDS-----------------------
+  div.card-body{
+    padding: 40px;
+  }
+  div.card-group-element{
+    max-width: 1200px;
+    margin: auto;
+  }
+  //--------------------------------------------
+
+  // menü rechts
+  ul.navbar-nav{
+    justify-content: end !important;
+  }
+
+
+  // bild ganz nach links - hauptseite
+  //div#c64{
+  //margin: 0;
+  //padding: 0;
+  //}
+  //#c64 div.frame-container.frame-container-default{
+  //margin-left: 0;
+  //padding-left: 0;
+
+  //}
+
+  // icon Bilder kleiner machen auf Startseite
+  #c60 picture{
+    width: 150px;
+    align-content: baseline;
+  }
+
+  //icons auf Produktseite anpassen
+  #c144 picture{
+    width: 150px;
+    align-content: center;
+  }
+
+
+  // container kleiner machen von den icons
+  #c60.frame-container-default{
+    max-width: 900px;
+  }
+
+  // länge vom Text auf über uns
+  #c70 p{
+    max-width: 700px;
+  }
+
+  // Bildgalerie größe
+  div#carousel-76{
+    max-width: 1000px;
+    margin: auto;
+  }
+
+
+  div#c66{
+    padding-top: 40px;
+
+  }
+
+  div #c64.frame-container{
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  // header ausrichten + Überschriften
+  div#c59{
+    padding-top:250px;
+    padding-bottom: 250px;
+    align-items: center;
+  }
+
+  #frame-backgroundimage-c59{
+    align-items: center;
+  }
+
+  // gab zwischen icons und Text auf Hauptseite
+  .textmedia, .textpic{
+    gap: 12px;
+  }
+
+  div #c68{
+    padding: 60px 0  60px 0;
+  }
+
+
+
+
+
+
+  //-----Footer--------------
+
+  .footer-section-content {
+    background-color: #626262;
+    --frame-color: #ffffff;
+    --frame-background: #313131;
+    --frame-link-color: white;
+    --frame-link-hover-color: #9A0404;
+    padding: 20px 0 20px 0;
+  }
+
+  //Spracheinstellungen umfärben - also das Deutach und englisch
+  .footer-language a{
+    color:white;
+    text-decoration: none;
+  }
+
+  .footer-language a:hover{
+    color:#9A0404;
+    text-decoration: none;
+  }
+
+  // abbstand anpassen bei der Col bei den Spracheinstellungen damit sie nicht so weit auseinander sind
+// im deutschen
+div #c150{
+    padding-bottom: 10px;
+  }
+
+//im englischen
+div #c178{
+    padding-bottom: 10px;
+  }
+
+
+
+  //-----------------------------------
+
+
+
+
+  /// News anpassen--------------------------
+  .news-img-wrap img{
+    height: 200px;
+    width: auto;
+  }
+
+  .news{
+    display: flex;
+  }
+
+  div #headerandteaser{
+    padding-left: 20px;
+  }
+
+  //zurück button bei Detailseite anpassen
+  .news-backlink-wrap{
+    padding:10px;
+    background-color: #9A0404;
+    width: 10%;
+    text-align: center;
+  }
+
+  // zurückbutton bei Detailseite anpassen damit die Schrift weiß ist
+  .frame a[class=""], .frame a:not([class]) {
+    color: white;
+  }
+
+
+  //----------------------------------------------
+
+
+  //-----------------Kontakt seite---------
+  // Route planen stylen
+  div #c156 {
+    padding: 0;
+  }
+
+  div #c156 p{
+    margin: 20px 0 20px 0;
+  }
+
+  div #c82 a{
+    color:#9A0404 !important;
+  }
+
+
+  // ------------Formular stylen-------------
+  div #c155 input{
+    border: 1px solid grey;
+  }
+
+
+  //radio button stylen
+  div #trialogKontakt-155-radiobutton-1, #trialogContact-183-radiobutton-1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .form-actions {
+    margin-top: 2rem;
+  }
+  //-------------------------------------------
+
+
+
+
+
+  //-----Mein Profil---------------------------
+  .embed-responsive-item{
+    border-radius: 20px;
+  }

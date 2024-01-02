@@ -5,3 +5,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:trialog/Configuration/TsConfig/Page/TCEFORM.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:trialog/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:trialog/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+
+tx_news.templateLayouts {
+    1 = Firmennews
+    2 = Newsdetail
+}

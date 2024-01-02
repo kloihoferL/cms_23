@@ -3,6 +3,7 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
 
 ##############
 #### PAGE ####
@@ -29,3 +30,30 @@ page {
         trialog_scripts = EXT:trialog/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
+
+plugin.tx_news{
+    settings{
+        # Anzahl Zeichen beschränken
+        cropMaxCharacters =400
+        list{
+            # Wie viele Elemente auf Seite
+            #itemsPerPage = 4
+            insertAbove = false
+            insertBelow = true
+        }
+    }
+    _LOCAL_LANG{
+        de{
+            # Begriffe für Deutsch überschreiben
+            more-link = Mehr erfahren
+            back-link = Zurück
+        }
+        en{
+            # Begriffe für Deutsch überschreiben
+            more-link = Find out more
+            back-link = Back
+        }
+    }
+}
+
+
